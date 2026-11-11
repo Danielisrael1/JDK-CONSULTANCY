@@ -1,0 +1,46 @@
+/*
+  The page's own CSS, loaded after the design kit (public/assets). The kit sets the layout, the
+  type, the buttons and the motion; this file only adds what sits inside a visual or a panel, and
+  how each section's pictures are sized on a tablet and a phone so that it still fills whole screens.
+*/
+
+/* the <picture> round a photograph takes no box: its <img> is laid out as the frame's own child */
+picture.pic { display: contents; }
+.frame > picture.pic > .frame__img {
+  position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; max-width: none; object-fit: cover;
+}
+
+/* the nav word of the section on screen: the kit's 2px bar under it */
+.nav__link[aria-current="location"]::after {
+  content: ""; position: absolute; left: var(--s-3); right: var(--s-3); bottom: -2px; height: 2px; border-radius: 2px; background: currentColor;
+}
+
+/* services: the photograph is a square on the right six columns */
+.svc__photo { --ratio: 100%; }
+.svc__more { margin-top: var(--s-5); }
+
+/* clients: two photographs of one ratio */
+.pair__photo { --ratio: 75%; }
+
+/* contact: the place, the phone and the email, then a photograph; the form on the surface ground */
+.meet__panel { background: var(--g-alt, var(--surface)); border-radius: var(--r-lg); padding: var(--s-7); }
+.meet__where { font-style: normal; font-size: var(--t-lead); display: grid; gap: var(--s-3); justify-items: start; }
+.meet__photo { --ratio: 66.667%; margin-top: var(--s-6); }
+
+/* tablet: the services photograph is a wide band under the list, the pair stays side by side as
+   squares, the contact form stays beside its words, and the close's button keeps its large size */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .svc__photo { --ratio: 50%; margin-top: var(--s-7); }
+  .pair > .pair__photo { grid-column: auto / span 6; --ratio: 100%; }
+  #meeting > .wrap > .span-5 { grid-column: 1 / span 5; }
+  #meeting > .wrap > .meet__panel { grid-column: 6 / -1; padding: var(--s-6); }
+  .closing__cta.close--type > .btn--xl:not(.btn--wide) { width: min(100%, 480px); }
+}
+
+/* phone: the services photograph and the form each take the second screen of their section */
+@media (max-width: 639px) {
+  .svc__photo { --ratio: 125%; }
+  .pair__photo { --ratio: 56%; }
+  .meet__panel { padding: var(--s-5); align-self: start; }
+  .closing__links > .footer__legal { gap: var(--s-2); }
+}

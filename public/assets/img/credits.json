@@ -1,0 +1,78 @@
+{
+ "note": "Credits for the photographs in this folder: photos.mjs credits prints the footer block for the ones the pages use.",
+ "photos": [
+  {
+   "file": "photo-f109616776-1280.jpg",
+   "files": [
+    "photo-f109616776-500.jpg",
+    "photo-f109616776-960.jpg",
+    "photo-f109616776-1280.jpg"
+   ],
+   "id": "f109616776",
+   "alt": "The Church House, Kampala Road, Kampala, Uganda",
+   "by": "Gachangi",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Church_House,_Kampala_Road,_Kampala,_Uganda.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f117488898-960.jpg",
+   "files": [
+    "photo-f117488898-500.jpg",
+    "photo-f117488898-960.jpg"
+   ],
+   "id": "f117488898",
+   "alt": "Urban Rising, KAMPALA, Uganda",
+   "by": "Chapelle musa",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Urban_Rising,_KAMPALA,_Uganda.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f117485966.jpg",
+   "files": [
+    "photo-f117485966-500.jpg",
+    "photo-f117485966-960.jpg",
+    "photo-f117485966.jpg"
+   ],
+   "id": "f117485966",
+   "alt": "Kampala Road, Habitat, Uganda",
+   "by": "Chapelle musa",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kampala_Road,_Habitat,_Uganda.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f117486313-960.jpg",
+   "files": [
+    "photo-f117486313-500.jpg",
+    "photo-f117486313-960.jpg"
+   ],
+   "id": "f117486313",
+   "alt": "Apartments in Kampala City, Uganda",
+   "by": "Chapelle musa",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Apartments_in_Kampala_City,_Uganda.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f183583405.jpg",
+   "files": [
+    "photo-f183583405-500.jpg",
+    "photo-f183583405-960.jpg",
+    "photo-f183583405.jpg"
+   ],
+   "id": "f183583405",
+   "alt": "View of Kampala city 2",
+   "by": "Dr. S-mon",
+   "licence": "CC BY 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:View_of_Kampala_city_2.jpg",
+   "source": "Wikimedia Commons"
+  }
+ ]
+}
