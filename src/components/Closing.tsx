@@ -3,12 +3,13 @@ import Arrow from './Arrow'
 import Logo from './Logo'
 import { useSection } from '../kit'
 
-// footer.closing: row 1 the dealt close (close-type: the firm's own line and the one big button),
-// row 2 the columns and the legal row.
+// footer.closing on the page's inverse ground (footer-dark: the deep olive), one last screen.
+// Row 1 is the dealt close (close-type: the firm's own line set large, a line, the one big
+// button); row 2 the name set large on the left, three link columns on the right, then the legal row.
 export default function Closing() {
   useSection('closing')
   return (
-    <footer className="footer closing" id="contact" aria-labelledby="close-h">
+    <footer className="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
       <div className="wrap">
         <div className="closing__cta close--type">
           <div className="section-head">
@@ -20,11 +21,11 @@ export default function Closing() {
         <div className="closing__links">
           <div className="grid">
             <div className="span-4 stack-4">
-              <Logo />
+              <Logo big />
               <p className="footer__lede">{closing.lede}</p>
             </div>
-            {closing.columns.map((col) => (
-              <div className="span-2 footer__col" key={col.head}>
+            {closing.columns.map((col, i) => (
+              <div className={`span-2 footer__col${i === 0 ? ' start-7' : ''}`} key={col.head}>
                 <h3>{col.head}</h3>
                 <ul>
                   {col.links.map((l) => (
@@ -38,6 +39,7 @@ export default function Closing() {
               <ul>
                 <li><a href={firm.phone.href}>{firm.phone.label}</a></li>
                 <li><a href={`mailto:${firm.email}`}>{meeting.write}</a></li>
+                <li>{firm.post}</li>
               </ul>
             </div>
           </div>

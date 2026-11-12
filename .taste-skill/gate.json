@@ -1,0 +1,347 @@
+{
+ "start": "2026-11-11T11:04:51.867Z",
+ "round": 2,
+ "idle": 0,
+ "errors": 0,
+ "status": "pass",
+ "history": [
+  {
+   "at": "2026-11-11T12:06:12.267Z",
+   "mode": "hook",
+   "host": "claude",
+   "status": "fail",
+   "fails": 3,
+   "round": 0,
+   "reused": false,
+   "stopHookActive": false,
+   "decision": "block",
+   "reason": "3 FAILs remain (not a round: the gate has not been run by hand in this build yet):"
+  },
+  {
+   "at": "2026-11-11T12:12:51.123Z",
+   "mode": "hook",
+   "host": "claude",
+   "status": "fail",
+   "fails": 1,
+   "round": 0,
+   "reused": false,
+   "stopHookActive": true,
+   "decision": "block",
+   "reason": "1 FAIL remain (not a round: the gate has not been run by hand in this build yet):"
+  },
+  {
+   "at": "2026-11-12T09:11:10.262Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 4,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-12T09:16:46.510Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 1,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-12T09:27:21.069Z",
+   "mode": "manual",
+   "status": "pass",
+   "fails": 0,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "dist/index.html",
+  "url": null,
+  "root": "dist",
+  "kind": "service",
+  "category": "management consultancy",
+  "primary": "Request a meeting",
+  "rounds": 3,
+  "start": "2026-11-11T11:04:51.867Z",
+  "by": "gate.mjs --start"
+ },
+ "roundKey": "5cce8e82edffa51d:63d29d94",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "b763761c11541e0b",
+ "page": "dist/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "phone-number",
+    "where": "div.wrap.grid > div.meet__words > address.meet__where > a.link:nth-of-type(1) \"0782 609 130\"",
+    "msg": "a phone number with its area code: \"0782 609 130\"; a visitor can dial it and reach a stranger (and in the same element: \"tel:+256782609130\") (and 2 more like it: div.grid > div.span-2.footer__col:nth-of-type(4) > ul > li:nth-of-type(1), in its aria-label)",
+    "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "phone-number"
+    ],
+    "wheres": [
+     "div.wrap.grid > div.meet__words > address.meet__where > a.link:nth-of-type(1) \"0782 609 130\""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div.closing__links > div.grid > div.span-4.stack-4 > a.footer__mark \"J JDK Consultancy\"",
+    "msg": "left edge at 45px, 21px off the page margin at 24px (25 elements, like span.mark.mark--initial)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div.closing__links > div.grid > div.span-4.stack-4 > a.footer__mark \"J JDK Consultancy\""
+    ]
+   },
+   {
+    "check": "one-sided",
+    "where": "#meeting section.section.g2m \"Contact the firmWrite what your \"",
+    "msg": "its visuals end at x 708, short of the right line 1360",
+    "fix": "let the row reach both .wrap edges",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "one-sided"
+    ],
+    "wheres": [
+     "#meeting section.section.g2m \"Contact the firmWrite what your \""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "scroll-reveal",
+    "where": "section#meeting > div.wrap.grid > div.meet__words > figure.meet__photo.mo-pd",
+    "msg": "starts an animation (1.6 s) the moment it is scrolled into view (an IntersectionObserver) on img (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "pinned",
+    "where": "section#services > div.wrap.mo-pc__grid \"Three advisory services Strategic planni\"",
+    "msg": "held on screen for 1 screen of scroll (position: sticky) while the page moves on (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)",
+    "fix": "let the section scroll with the page",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#services \"Three advisory services\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-headings",
+    "where": "div.wrap > div.grid.sectors__grid > article.card.card--row:nth-of-type(1) > h3 \"Finance, banking and fintech\"",
+    "msg": "the card title \"Finance, banking and fintech\" names no product, part, place or section (2 card titles like it) (and 1 more like it: \"Social impact, civic tec\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#sectors / section#meeting",
+    "msg": "uneven space at the edge of a band: 114px outside its edge, 72px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.hero-text.hero__in > div.hero__media.hero__fill > picture.pic > img \"photo-p30689114-1280.avif\"",
+    "msg": "5 photographs in more than one look: saturation from 0.24 to 0.58; the odd one out is photo-p30689114-1280.avif",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-credit",
+    "where": "(the page text)",
+    "msg": "2 library sources (pexels, wikimedia): the page credits pexels, the page credits wikimedia; confirm each shows the client's own product, place or people",
+    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "label-centre",
+    "where": "header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Request a meeting\"",
+    "msg": "its label sits 18px off-centre (25px of room at the left, 43px at the right) (and 2 more like it: \"Request a meeting\", \"Request a meeting\")",
+    "fix": "centre the label in its button, or fill the empty side with an icon",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"request a meeting\"",
+    "msg": "\"request a meeting\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "container-edges",
+    "where": "div.wrap.mo-pc__grid > div.mo-pc__text > ol.mo-pc__steps > li.mo-pc__step:nth-of-type(1) \"Strategic planningSetting out where the \"",
+    "msg": "3 text blocks start on a left line at x 106, 26px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"Operational supportRefining the \", \"Project managementPlanning a pro\") (it is in a scroll scene: told as a WARN) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "split-pair",
+    "where": "section#services > div.wrap.mo-pc__grid \"Three advisory servicesStrategic plannin\"",
+    "msg": "the two columns of the split start 145px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (it is in a scroll scene: told as a WARN) (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#services / section#sectors",
+    "msg": "uneven space at the edge of a band: 48px outside its edge, 92px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#meeting / footer#contact",
+    "msg": "uneven space at the edge of a band: 48px outside its edge, 89px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.hero-text.hero__in > div.hero__media.hero__fill > picture.pic > img \"photo-p30689114-tall-480.avif\"",
+    "msg": "7 photographs in more than one look: warm and cool photographs mixed (b* -6 to +15); the odd one out is photo-p30689114-tall-480.avif",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "label-centre",
+    "where": "div.hero__over > div > div.btn-row > a.btn.btn--primary \"Request a meeting\"",
+    "msg": "its label sits 18px off-centre (57px of room at the left, 75px at the right) (and 1 more like it: \"Request a meeting\")",
+    "fix": "centre the label in its button, or fill the empty side with an icon",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 119,
+   "layout": 15
+  }
+ },
+ "open": [],
+ "waived": [
+  {
+   "check": "phone-number",
+   "where": "div.wrap.grid > div.meet__words > address.meet__where > a.link:nth-of-type(1) \"0782 609 130\"",
+   "msg": "a phone number with its area code: \"0782 609 130\"; a visitor can dial it and reach a stranger (and in the same element: \"tel:+256782609130\") (and 2 more like it: div.grid > div.span-2.footer__col:nth-of-type(4) > ul > li:nth-of-type(1), in its aria-label)",
+   "fix": "drop the number and its tel: link (a \"Request a call\" form may stand in), unless the brief gives the number",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "phone-number"
+   ],
+   "wheres": [
+    "div.wrap.grid > div.meet__words > address.meet__where > a.link:nth-of-type(1) \"0782 609 130\""
+   ],
+   "reason": "the user supplied the firm's own phone number, 0782 609 130, to be printed on the site"
+  },
+  {
+   "check": "off-grid",
+   "where": "div.closing__links > div.grid > div.span-4.stack-4 > a.footer__mark \"J JDK Consultancy\"",
+   "msg": "left edge at 45px, 21px off the page margin at 24px (25 elements, like span.mark.mark--initial)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div.closing__links > div.grid > div.span-4.stack-4 > a.footer__mark \"J JDK Consultancy\""
+   ],
+   "reason": "the footer's logo lockup: its initial mark sits on the page margin at 24px and the name follows the mark; the check measures where the name's text starts, not the lockup"
+  },
+  {
+   "check": "one-sided",
+   "where": "#meeting section.section.g2m \"Contact the firmWrite what your \"",
+   "msg": "its visuals end at x 708, short of the right line 1360",
+   "fix": "let the row reach both .wrap edges",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "one-sided"
+   ],
+   "wheres": [
+    "#meeting section.section.g2m \"Contact the firmWrite what your \""
+   ],
+   "reason": "the right six columns hold the form on its surface panel, which ends on the right line; the check counts only the photograph in the left column"
+  }
+ ],
+ "warnCount": 15,
+ "at": "2026-11-12T09:27:21.071Z",
+ "session": "61835e29-722c-478e-b823-dd2c3dc4c762",
+ "manual": true
+}

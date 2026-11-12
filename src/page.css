@@ -1,46 +1,90 @@
 /*
   The page's own CSS, loaded after the design kit (public/assets). The kit sets the layout, the
   type, the buttons and the motion; this file only adds what sits inside a visual or a panel, and
-  how each section's pictures are sized on a tablet and a phone so that it still fills whole screens.
+  how each section's pictures grow so that every screen is filled: no section ends in bare ground.
 */
 
 /* the <picture> round a photograph takes no box: its <img> is laid out as the frame's own child */
 picture.pic { display: contents; }
-.frame > picture.pic > .frame__img {
+:is(.frame, .panel) > picture.pic > .frame__img {
   position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; max-width: none; object-fit: cover;
 }
+
+/* a panel with no effect stands on the page's own slate, not the kit's default sand */
+.panel { --ground-bg: var(--p-bg); }
 
 /* the nav word of the section on screen: the kit's 2px bar under it */
 .nav__link[aria-current="location"]::after {
   content: ""; position: absolute; left: var(--s-3); right: var(--s-3); bottom: -2px; height: 2px; border-radius: 2px; background: currentColor;
 }
 
-/* services: the photograph is a square on the right six columns */
-.svc__photo { --ratio: 100%; }
-.svc__more { margin-top: var(--s-5); }
+/* services, live (from 1024 on a screen 640 or taller): the shared frame is square rather than
+   4:3, so the photograph reaches nearly as deep as the screen the stage holds, and the steps are set
+   a size up and centred beside it. The moment's stylesheet loads after this file, so these rules
+   carry the section's id to win. */
+#services.is-live > .mo-pc__grid { align-items: center; }
+#services.is-live .mo-pc__visuals { aspect-ratio: 1 / 1; }
+#services .mo-pc__text { gap: var(--s-7); }
+#services .mo-pc__steps { gap: var(--s-6); }
+#services .mo-pc__step h3 { font-size: 24px; line-height: 1.25; }
+#services .mo-pc__step p { font-size: var(--t-lead); line-height: 1.5; }
 
-/* clients: two photographs of one ratio */
-.pair__photo { --ratio: 75%; }
+/* sectors: the card row takes the screen under the heading, and each panel grows with it; the
+   section is the page's one surface band (surface-pairs) */
+.sectors__grid { grid-template-rows: minmax(0, 1fr); }
+.sectors__grid > .card { min-height: 0; }
 
-/* contact: the place, the phone and the email, then a photograph; the form on the surface ground */
-.meet__panel { background: var(--g-alt, var(--surface)); border-radius: var(--r-lg); padding: var(--s-7); }
+/* contact: the words, the P.O. box, the phone and the email, then a photograph that runs down to
+   the foot of the form beside it; the form on a panel of the surface ground. On a phone the kit's
+   .g2m gives each column a screen of its own: the photograph fills the first, the form the second */
+@media (min-width: 640px) { #meeting > .wrap { grid-template-rows: minmax(0, 1fr); align-content: stretch; } }
+@media (min-width: 1024px) {
+  #meeting > .wrap > .meet__words { grid-column: 1 / span 6; }
+  #meeting > .wrap > .meet__panel { grid-column: 7 / span 6; }
+}
+#meeting > .wrap > * { align-self: stretch; }
+.meet__words { display: flex; flex-direction: column; }
 .meet__where { font-style: normal; font-size: var(--t-lead); display: grid; gap: var(--s-3); justify-items: start; }
-.meet__photo { --ratio: 66.667%; margin-top: var(--s-6); }
+.meet__photo { flex: 1 1 0; min-height: 200px; margin: var(--s-6) 0 0; border-radius: var(--r-lg); overflow: hidden; background: var(--surface); }
+.meet__photo > img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+.meet__panel { background: var(--g-alt, var(--surface)); border-radius: var(--r-lg); padding: var(--s-7); display: flex; flex-direction: column; }
+.meet__panel > .form { flex: 1 1 auto; display: flex; flex-direction: column; }
+.meet__panel .field:has(textarea) { flex: 1 1 auto; display: flex; flex-direction: column; }
+.meet__panel textarea { flex: 1 1 auto; min-height: 120px; resize: vertical; }
 
-/* tablet: the services photograph is a wide band under the list, the pair stays side by side as
-   squares, the contact form stays beside its words, and the close's button keeps its large size */
-@media (min-width: 640px) and (max-width: 1023px) {
-  .svc__photo { --ratio: 50%; margin-top: var(--s-7); }
-  .pair > .pair__photo { grid-column: auto / span 6; --ratio: 100%; }
-  #meeting > .wrap > .span-5 { grid-column: 1 / span 5; }
-  #meeting > .wrap > .meet__panel { grid-column: 6 / -1; padding: var(--s-6); }
-  .closing__cta.close--type > .btn--xl:not(.btn--wide) { width: min(100%, 480px); }
+/* the close: the heading set large, so the line, the button and the footer below fill the olive
+   screen (footer headings are not ranked against the page's h2s) */
+.closing__cta.close--type h2 { font-size: clamp(40px, 5.6vw + 14px, 96px); line-height: 1.02; letter-spacing: var(--display-tracking-xl); max-width: 16ch; }
+
+/* the hero from 1024 to 1279: the frame is only 864 to 1120 wide there, so the words' box is set
+   narrower, with the headline a size down, and the photograph sits to the right, keeping the
+   people in view beside the box */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero--film .hero__over > :first-child { max-width: 480px; padding: var(--s-6); }
+  .hero--film .hero__over h1 { font-size: 48px; }
+  .hero--film .hero__media > picture > img { object-position: 100% 40%; }
 }
 
-/* phone: the services photograph and the form each take the second screen of their section */
+/* tablet: the sector cards keep their pair, the contact form stays beside its words, and the close's
+   heading takes two lines and its button the full width, so the tall screen is filled */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .closing__cta.close--type h2 { font-size: clamp(64px, 11vw, 112px); max-width: 12ch; }
+  #meeting > .wrap > .meet__words { grid-column: 1 / span 5; }
+  #meeting > .wrap > .meet__panel { grid-column: 6 / -1; padding: var(--s-6); }
+  .closing__cta.close--type > .btn--xl:not(.btn--wide) { width: 100%; }
+}
+
+/* phone: the bar keeps the logo and the menu button, and the main action is the first row of the
+   open menu; the two sector cards share the screen under the heading, their photographs taking
+   what the words leave */
 @media (max-width: 639px) {
-  .svc__photo { --ratio: 125%; }
-  .pair__photo { --ratio: 56%; }
-  .meet__panel { padding: var(--s-5); align-self: start; }
+  .nav:not(.is-open) .nav__actions { display: none; }
+  .nav:not(.is-open) .nav__actions + .nav__toggle { margin-left: auto; }
+  .sectors__grid { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+  .sectors__grid > .card { min-height: 0; }
+  .sectors__grid .panel { --p-h: 120px; flex: 1 1 0; }
+  .meet__panel { padding: var(--s-5); }
+  .meet__panel textarea { min-height: 140px; }
+  .closing__links > .grid { row-gap: var(--s-4); }
   .closing__links > .footer__legal { gap: var(--s-2); }
 }

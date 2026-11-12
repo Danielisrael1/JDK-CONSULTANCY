@@ -8,15 +8,13 @@ import Hero from './components/Hero'
 // those downloads at once, so hydration never waits on a chain of imports.
 export const below = {
   Services: () => import('./components/Services'),
-  Firm: () => import('./components/Firm'),
-  Clients: () => import('./components/Clients'),
+  Sectors: () => import('./components/Sectors'),
   Meeting: () => import('./components/Meeting'),
   Closing: () => import('./components/Closing'),
 }
 
 const Services = lazy(below.Services)
-const Firm = lazy(below.Firm)
-const Clients = lazy(below.Clients)
+const Sectors = lazy(below.Sectors)
 const Meeting = lazy(below.Meeting)
 const Closing = lazy(below.Closing)
 
@@ -28,8 +26,7 @@ export default function App() {
       <main id="top">
         <Hero />
         <Suspense fallback={null}><Services /></Suspense>
-        <Suspense fallback={null}><Firm /></Suspense>
-        <Suspense fallback={null}><Clients /></Suspense>
+        <Suspense fallback={null}><Sectors /></Suspense>
         <Suspense fallback={null}><Meeting /></Suspense>
       </main>
       <Suspense fallback={null}><Closing /></Suspense>

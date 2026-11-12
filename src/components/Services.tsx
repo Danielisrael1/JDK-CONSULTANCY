@@ -1,41 +1,55 @@
 import type { CSSProperties } from 'react'
 import { services } from '../content'
 import { photos } from '../photos'
-import Pic from './Pic'
 import { useSection } from '../kit'
 
-// services-list: the three services as ruled rows beside one photograph. No prices: the firm has
-// given none, so the rows carry a name and a line only.
+// The dealt moment, pinned-chapters (the kit's moments/pinned-chapters, mounted by system.js from
+// data-moment): from 1024px on a screen 640px or taller the section holds for one screen of scroll
+// while the three services open one at a time and the frame on the right changes to each one's
+// photograph. Otherwise, under reduced motion and without script, every service is a row with its
+// photograph beside it (under 640px, under it). The script moves each <figure> into the shared
+// frame and back, and wraps each line in a span; nothing here re-renders, so React never sees it.
+// The photographs are plain <img>s: the moment's styles target `.mo-pc__visual > img`.
 export default function Services() {
   useSection('services')
-  const p = photos.services
   return (
-    <section className="section g2m" id="services" aria-labelledby="services-h">
-      <div className="wrap grid grid--top">
-        <div className="span-5">
-          <div className="section-head">
-            <h2 id="services-h">{services.h2}</h2>
-            <p>{services.line}</p>
-          </div>
-          <ul className="rows">
-            {services.rows.map((row) => (
-              <li key={row.name}>
-                <span className="rows__name">{row.name}</span>
-                <p>{row.line}</p>
-              </li>
-            ))}
-          </ul>
-          <p className="svc__more"><a className="link" href={services.link.href}>{services.link.label}</a></p>
+    <section
+      className="section"
+      id="services"
+      style={{ '--h': 2 } as CSSProperties}
+      data-moment="pinned-chapters"
+      aria-labelledby="services-h"
+    >
+      <div className="wrap mo-pc__grid">
+        <div className="mo-pc__text">
+          <h2 id="services-h">{services.h2}</h2>
+          <ol className="mo-pc__steps">
+            {services.steps.map((step) => {
+              const p = photos[step.photo]
+              return (
+                <li className="mo-pc__step" key={step.name}>
+                  <h3>{step.name}</h3>
+                  <p>{step.line}</p>
+                  <figure className="mo-pc__visual">
+                    <img
+                      src={p.src}
+                      srcSet={p.srcset}
+                      sizes={p.sizes}
+                      width={p.width}
+                      height={p.height}
+                      alt={p.alt}
+                      loading="lazy"
+                      decoding="async"
+                      data-source="stand-in"
+                      data-subject={p.subject}
+                    />
+                  </figure>
+                </li>
+              )
+            })}
+          </ol>
         </div>
-        <div className="frame frame--photo span-6 start-7 svc__photo">
-          <Pic
-            photo={p}
-            className="frame__img"
-            style={p.pos ? ({ objectPosition: p.pos } as CSSProperties) : undefined}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
+        <div className="mo-pc__visuals frame" />
       </div>
     </section>
   )

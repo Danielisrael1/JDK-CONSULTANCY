@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 
-// The design kit (nav sheet, form, hover layer, hero entrance, the dealt moment) is plain JS that
+// The design kit (nav sheet, form, hover layer, hero entrance, the dealt moments) is plain JS that
 // reads the DOM once. It is loaded only after every section has committed, so hydration never
 // sees the kit's DOM changes: the below-the-fold sections are lazy chunks, and a kit mutation
 // inside a boundary React had not hydrated yet would be undone when it did. The scripts load in
 // document order, since motion.js and layout.js build on system.js.
 const KIT = ['/assets/system.js', '/assets/motion/motion.js', '/assets/layout/layout.js']
-const SECTIONS = ['nav', 'hero', 'services', 'firm', 'clients', 'meeting', 'closing'] as const
+const SECTIONS = ['nav', 'hero', 'services', 'sectors', 'meeting', 'closing'] as const
 export type Section = (typeof SECTIONS)[number]
 
 const committed = new Set<Section>()

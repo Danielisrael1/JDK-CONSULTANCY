@@ -1,20 +1,37 @@
 {
   "palettes": [
-    "cobalt-on-sand"
+    "oxblood-grey",
+    "cobalt-on-sand",
+    "blush-sage-slate"
   ],
   "types": [
-    "hanken"
+    "newsreader",
+    "hanken",
+    "red-hat"
   ],
   "dealt": [
     "newsreader",
     "hanken",
-    "rethink"
+    "rethink",
+    "red-hat",
+    "literata",
+    "zilla"
   ],
   "moments": [
     {
       "id": "word-highlight",
       "at": "2026-11-11T11:04:52.884Z",
       "seed": "3e762632"
+    },
+    {
+      "id": "pinned-chapters",
+      "at": "2026-11-11T12:31:19.283Z",
+      "seed": "eaffe016"
+    },
+    {
+      "id": "picture-develops",
+      "at": "2026-11-12T08:33:40.477Z",
+      "seed": "a5512227"
     }
   ]
 }

@@ -1,0 +1,5 @@
+[
+  {"check": "phone-number", "target": "address.meet__where", "reason": "the user supplied the firm's own phone number, 0782 609 130, to be printed on the site"},
+  {"check": "one-sided", "target": "#meeting", "reason": "the right six columns hold the form on its surface panel, which ends on the right line; the check counts only the photograph in the left column"},
+  {"check": "off-grid", "target": "a.footer__mark", "reason": "the footer's logo lockup: its initial mark sits on the page margin at 24px and the name follows the mark; the check measures where the name's text starts, not the lockup"}
+]

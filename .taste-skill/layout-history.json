@@ -1,6 +1,9 @@
 {
  "heroes": [
+  "photo",
   "film",
-  "split"
+  "split",
+  "film",
+  "statement"
  ]
 }

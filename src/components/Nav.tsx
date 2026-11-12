@@ -2,12 +2,12 @@ import { action, nav } from '../content'
 import Logo from './Logo'
 import { useSection } from '../kit'
 
-// nav-centre: the logo on the left line, the words on the page axis, the one button on the right.
-// system.js turns it into a sheet on a phone and runs the toggle; no script of our own.
+// nav-split: the words in the left third, the mark and the name on the page's centre line, the one
+// button in the right third. system.js turns it into a sheet on a phone and runs the toggle.
 export default function Nav() {
   useSection('nav')
   return (
-    <header className="nav nav--centre">
+    <header className="nav nav--split">
       <div className="wrap nav__bar">
         <a className="skip-link" href="#top">Skip to content</a>
         <Logo />

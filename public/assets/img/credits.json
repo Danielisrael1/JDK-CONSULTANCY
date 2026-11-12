@@ -1,12 +1,87 @@
 {
- "note": "Credits for the photographs in this folder: photos.mjs credits prints the footer block for the ones the pages use.",
+ "note": "Credits for the photographs in this folder (every one a stand-in until the firm supplies its own); /credits.html lists them for visitors.",
  "photos": [
   {
-   "file": "photo-f109616776-1280.jpg",
+   "file": "photo-p30689114-800.jpg",
+   "files": [
+    "photo-p30689114-800.jpg",
+    "photo-p30689114-1280.jpg",
+    "photo-p30689114-1920.jpg"
+   ],
+   "id": "p30689114",
+   "alt": "Team Collaboration Meeting in Lagos Office",
+   "by": "Ninthgrid",
+   "licence": "Pexels licence",
+   "licenceUrl": "https://www.pexels.com/license/",
+   "page": "https://www.pexels.com/photo/team-collaboration-meeting-in-lagos-office-30689114/",
+   "source": "Pexels"
+  },
+  {
+   "file": "photo-p30689114-tall-960.jpg",
+   "files": [
+    "photo-p30689114-tall-480.jpg",
+    "photo-p30689114-tall-720.jpg",
+    "photo-p30689114-tall-960.jpg"
+   ],
+   "id": "p30689114-tall",
+   "alt": "Team Collaboration Meeting in Lagos Office (tall cut)",
+   "by": "Ninthgrid",
+   "licence": "Pexels licence",
+   "licenceUrl": "https://www.pexels.com/license/",
+   "page": "https://www.pexels.com/photo/team-collaboration-meeting-in-lagos-office-30689114/",
+   "source": "Pexels"
+  },
+  {
+   "file": "photo-p7414040-800.jpg",
+   "files": [
+    "photo-p7414040-480.jpg",
+    "photo-p7414040-800.jpg",
+    "photo-p7414040-1256.jpg"
+   ],
+   "id": "p7414040",
+   "alt": "Woman Presenting on a White Board",
+   "by": "RDNE Stock project",
+   "licence": "Pexels licence",
+   "licenceUrl": "https://www.pexels.com/license/",
+   "page": "https://www.pexels.com/photo/woman-presenting-on-a-white-board-7414040/",
+   "source": "Pexels"
+  },
+  {
+   "file": "photo-p30848031-800.jpg",
+   "files": [
+    "photo-p30848031-480.jpg",
+    "photo-p30848031-800.jpg",
+    "photo-p30848031-1256.jpg"
+   ],
+   "id": "p30848031",
+   "alt": "Small Shop Interior with Local Shopkeeper",
+   "by": "Kalz Michael",
+   "licence": "Pexels licence",
+   "licenceUrl": "https://www.pexels.com/license/",
+   "page": "https://www.pexels.com/photo/small-shop-interior-with-local-shopkeeper-30848031/",
+   "source": "Pexels"
+  },
+  {
+   "file": "photo-p30688592-800.jpg",
+   "files": [
+    "photo-p30688592-480.jpg",
+    "photo-p30688592-800.jpg",
+    "photo-p30688592-1256.jpg"
+   ],
+   "id": "p30688592",
+   "alt": "High-Level Business Meeting in Lagos Office",
+   "by": "Ninthgrid",
+   "licence": "Pexels licence",
+   "licenceUrl": "https://www.pexels.com/license/",
+   "page": "https://www.pexels.com/photo/high-level-business-meeting-in-lagos-office-30688592/",
+   "source": "Pexels"
+  },
+  {
+   "file": "photo-f109616776-800.jpg",
    "files": [
     "photo-f109616776-500.jpg",
-    "photo-f109616776-960.jpg",
-    "photo-f109616776-1280.jpg"
+    "photo-f109616776-800.jpg",
+    "photo-f109616776-1256.jpg"
    ],
    "id": "f109616776",
    "alt": "The Church House, Kampala Road, Kampala, Uganda",
@@ -17,54 +92,26 @@
    "source": "Wikimedia Commons"
   },
   {
-   "file": "photo-f117488898-960.jpg",
+   "file": "photo-p27471164-800.jpg",
    "files": [
-    "photo-f117488898-500.jpg",
-    "photo-f117488898-960.jpg"
+    "photo-p27471164-500.jpg",
+    "photo-p27471164-800.jpg",
+    "photo-p27471164-1256.jpg"
    ],
-   "id": "f117488898",
-   "alt": "Urban Rising, KAMPALA, Uganda",
-   "by": "Chapelle musa",
-   "licence": "CC BY-SA 4.0",
-   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Urban_Rising,_KAMPALA,_Uganda.jpg",
-   "source": "Wikimedia Commons"
+   "id": "p27471164",
+   "alt": "A group of people sitting around a tree",
+   "by": "Speak Media Uganda",
+   "licence": "Pexels licence",
+   "licenceUrl": "https://www.pexels.com/license/",
+   "page": "https://www.pexels.com/photo/a-group-of-people-sitting-around-a-tree-27471164/",
+   "source": "Pexels"
   },
   {
-   "file": "photo-f117485966.jpg",
-   "files": [
-    "photo-f117485966-500.jpg",
-    "photo-f117485966-960.jpg",
-    "photo-f117485966.jpg"
-   ],
-   "id": "f117485966",
-   "alt": "Kampala Road, Habitat, Uganda",
-   "by": "Chapelle musa",
-   "licence": "CC BY-SA 4.0",
-   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Kampala_Road,_Habitat,_Uganda.jpg",
-   "source": "Wikimedia Commons"
-  },
-  {
-   "file": "photo-f117486313-960.jpg",
-   "files": [
-    "photo-f117486313-500.jpg",
-    "photo-f117486313-960.jpg"
-   ],
-   "id": "f117486313",
-   "alt": "Apartments in Kampala City, Uganda",
-   "by": "Chapelle musa",
-   "licence": "CC BY-SA 4.0",
-   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Apartments_in_Kampala_City,_Uganda.jpg",
-   "source": "Wikimedia Commons"
-  },
-  {
-   "file": "photo-f183583405.jpg",
+   "file": "photo-f183583405-800.jpg",
    "files": [
     "photo-f183583405-500.jpg",
-    "photo-f183583405-960.jpg",
-    "photo-f183583405.jpg"
+    "photo-f183583405-800.jpg",
+    "photo-f183583405-1038.jpg"
    ],
    "id": "f183583405",
    "alt": "View of Kampala city 2",

@@ -1,27 +1,35 @@
 <!doctype html>
-<html lang="en" data-type="service" data-radius="soft" data-buttons="block" data-motion>
+<html lang="en" data-type="service" data-radius="sharp" data-buttons="arrow" data-motion>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>JDK Consultancy and Project Managers: management consultants in Kampala</title>
+<title>JDK Consultancy: management consultants in Kampala, Uganda</title>
 <meta name="description" content="Strategic planning, operational support and project management for startups, SMEs and NGOs in Uganda, from a management consultancy based in Kampala.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:title" content="JDK Consultancy and Project Managers: management consultants in Kampala">
+<meta property="og:site_name" content="JDK Consultancy and Project Managers">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="JDK Consultancy: management consultants in Kampala, Uganda">
 <meta property="og:description" content="Strategic planning, operational support and project management for startups, SMEs and NGOs, from Kampala.">
 <meta property="og:image" content="/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="JDK Consultancy and Project Managers: consultancy for startups, SMEs and NGOs, over a photograph of three colleagues at a laptop">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#e6dbc7">
-<!-- <link rel="canonical" href="https://[the client's domain]/"> : the firm's domain is not known yet -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#a6b3bc">
+<!-- <link rel="canonical" href="https://[the client's domain]/"> : filled in by scripts/prerender.mjs from SITE_URL once the firm has a domain -->
 <meta name="site-kind" content="other">
 <meta name="page-type" content="service">
 <!-- type: service
-     hero split · nav nav-centre · close close-type · footer footer-columns · rhythm space · buttons block · mark stack
-     palette cobalt-on-sand (a sand ground and one cobalt ink) · type Hanken Grotesk · radius soft
-     motion: the hero's entrance, word-highlight in #firm, the hover layer -->
+     hero film (dealt; no film, so no play control: a photograph of people at work in the frame) · nav nav-split · close close-type · footer footer-dark · rhythm surface-pairs · buttons arrow · mark initial
+     palette blush-sage-slate (a slate ground, near-black ink, deep olive for buttons, the hero's box and the closing screen) · type Red Hat Display / Red Hat Text · radius sharp
+     search: the canonical link, og:url, the absolute share image, the hero's preloads and the structured data are added at build by scripts/prerender.mjs
+     motion: the hero's entrance, pinned-chapters in #services, picture-develops (film) in #meeting, the hover layer -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400..700&family=Red+Hat+Text:wght@400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/system.css">
 <link rel="stylesheet" href="/assets/ui/cards.css">
 <link rel="stylesheet" href="/assets/motion/motion.css">
@@ -31,24 +39,25 @@
 <!-- keep this <style> after the links: layout.css resets --ly-scale -->
 <style>
 :root {
-  --p-bg: #e6dbc7; --p-surface: #ddd0b9; --p-ink: #062b8a; --p-muted: #3253a4;
-  --p-accent: #062b8a; --p-accent-ink: #e6dbc7; --p-action: #062b8a; --p-action-ink: #e6dbc7;
-  --p-inv-bg: #062b8a; --p-inv-surface: #153a90; --p-inv-ink: #e6dbc7; --p-inv-muted: #aab0bc;
-  --p-inv-accent: #e6dbc7; --p-inv-accent-ink: #062b8a; --p-inv-action: #e6dbc7; --p-inv-action-ink: #062b8a;
-  --font-display: "Hanken Grotesk", system-ui, sans-serif;
-  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --p-bg: #a6b3bc; --p-surface: #b2bdc5; --p-ink: #1c1c1c; --p-muted: #38424a;
+  --p-accent: #2c3620; --p-accent-ink: #e3e2da; --p-action: #2c3620; --p-action-ink: #e3e2da;
+  --p-inv-bg: #2c3620; --p-inv-surface: #39422d; --p-inv-ink: #ffffff; --p-inv-muted: #a8ada3;
+  --p-inv-accent: #ffffff; --p-inv-accent-ink: #2c3620; --p-inv-action: #ffffff; --p-inv-action-ink: #2c3620;
+  --font-display: "Red Hat Display", system-ui, sans-serif;
+  --font-text: "Red Hat Text", system-ui, sans-serif;
   --display-weight: 400;
-  --display-tracking: -0.03em;
-  --display-tracking-xl: -0.038em;
+  --display-tracking: -0.025em;
+  --display-tracking-xl: -0.035em;
 }
 </style>
 <!-- the hero's entrance: the words wait for motion.js instead of flashing; the 700ms mark fades them in if it is late -->
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
-<!-- the dealt moment: the guard, then preloads for the core and word-highlight; system.js mounts it -->
+<!-- the dealt moments: the guard, then preloads for the core, pinned-chapters and picture-develops; system.js mounts them -->
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
 <link rel="modulepreload" href="/assets/moments/moments.js">
 <link rel="modulepreload" href="/assets/moments/lib.js">
-<link rel="modulepreload" href="/assets/moments/word-highlight/moment.js">
+<link rel="modulepreload" href="/assets/moments/pinned-chapters/moment.js">
+<link rel="modulepreload" href="/assets/moments/picture-develops/moment.js">
 <script type="module" src="/src/main.tsx"></script>
 </head>
 <body></body>
