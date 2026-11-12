@@ -23,7 +23,7 @@ Main action: Request a meeting (#meeting). Secondary in the hero: See the servic
 
 | # | id       | idea                                   | picture (kind)                                                | screens |
 |---|----------|----------------------------------------|---------------------------------------------------------------|---------|
-| 1 | hero     | consultancy for whom, and where        | three colleagues at a laptop, Lagos (use)                     | 1 |
+| 1 | hero     | consultancy for whom, and where        | a woman on the phone at her desk (use)                        | 1 |
 | 2 | services | the three services, one at a time      | pinned chapters: flip chart, a shop, a meeting (use)          | 2 live; rows at rest |
 | 3 | sectors  | the two sectors (surface band)         | two cards: Kampala Road (place), a community meeting (use)    | 1 |
 | 4 | meeting  | the form with the phone, email, P.O. box | Kampala across its hills, developing as it scrolls in (place) | 1 (2 on a phone, .g2m) |
@@ -35,5 +35,8 @@ their real size, so a section-wide panel stood mostly empty.
 Why it moves: the hero's entrance · pinned-chapters, the services opening as they are scrolled ·
 picture-develops, the contact photograph coming up like a print · hover: buttons, arrows, links,
 nav words.
+
+The hero's first photograph (three colleagues at a laptop, Lagos) was replaced at the user's
+request with PICHA Stock's woman at her desk.
 
 Assumed facts: none. Every photograph is a stand-in (README, "Before this goes live").

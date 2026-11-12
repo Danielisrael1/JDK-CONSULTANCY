@@ -63,12 +63,12 @@ picture.pic { display: contents; }
 .closing__cta.close--type h2 { font-size: clamp(40px, 5.6vw + 14px, 96px); line-height: 1.02; letter-spacing: var(--display-tracking-xl); max-width: 16ch; }
 
 /* from 1024 to 1279: the frame is only 864 to 1120 wide, so the hero's box is set narrower, with
-   the headline a size down, and the photograph sits to the right, keeping the people in view beside
-   the box; on a 768-tall screen the contact form's panel takes less padding so it fits its screen */
+   the headline a size down, and the photograph keeps its left edge, which puts the woman beside the
+   box rather than behind it; on a 768-tall screen the contact form's panel takes less padding so it fits its screen */
 @media (min-width: 1024px) and (max-width: 1279px) {
   .hero--film .hero__over > :first-child { max-width: 480px; padding: var(--s-6); }
   .hero--film .hero__over h1 { font-size: 48px; }
-  .hero--film .hero__media > picture > img { object-position: 100% 40%; }
+  .hero--film .hero__media > picture > img { object-position: 0% 50%; }
   .meet__panel { padding: var(--s-6); }
   .meet__panel textarea { min-height: 96px; }
 }

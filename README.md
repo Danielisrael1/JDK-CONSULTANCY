@@ -94,7 +94,7 @@ consultancy on Maps and in local results.
 
    | Slot | Stand-in now | Photograph to take |
    | --- | --- | --- |
-   | Hero | Three colleagues at a laptop, Lagos (Ninthgrid, Pexels) | The team at work |
+   | Hero | A woman on the phone at her desk (PICHA Stock, Pexels) | The team at work |
    | Strategic planning | A presenter at a flip chart (RDNE Stock project, Pexels) | A planning session with a client |
    | Operational support | A shopkeeper in his shop (Kalz Michael, Pexels) | A client's business the firm has supported |
    | Project management | A meeting round a table, Lagos (Ninthgrid, Pexels) | A project meeting |

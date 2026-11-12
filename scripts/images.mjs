@@ -21,8 +21,8 @@ const JPEG = { quality: 76, mozjpeg: true }
 // ratio is width / height of the crop; left, top and width are shares of the master; name is the
 // output's name when it differs from the master's id; jpeg overrides the JPEG quality for one crop
 const CROPS = [
-  { id: 'p30689114', ratio: 1280 / 804, left: 0, top: 0.03, width: 1, widths: [800, 1280, 1920] },               // hero, desktop: the team at the laptop
-  { id: 'p30689114', name: 'p30689114-tall', ratio: 3 / 5, left: 0.36, top: 0, width: 0.4, widths: [480, 720, 960] }, // hero, tablet and phone
+  { id: 'p3894377', ratio: 1280 / 804, left: 0, top: 0.276, width: 1, widths: [800, 1280, 1920] },              // hero, desktop: the woman at her desk, the screen at the lower left under the words' box
+  { id: 'p3894377', name: 'p3894377-tall', ratio: 3 / 5, left: 0.37, top: 0.28, width: 0.6, widths: [480, 720, 960] }, // hero, tablet and phone: her face in the top third, above the box
   { id: 'p7414040', ratio: 4 / 3, left: 0.111, top: 0, width: 0.889, widths: [480, 800, 1256] },               // services: strategic planning
   { id: 'p30848031', ratio: 4 / 3, left: 0, top: 0.27, width: 1, widths: [480, 800, 1256] },                    // services: operational support
   { id: 'p30688592', ratio: 4 / 3, left: 0.0555, top: 0, width: 0.889, widths: [480, 800, 1256] },             // services: project management

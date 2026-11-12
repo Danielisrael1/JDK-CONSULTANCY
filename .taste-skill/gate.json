@@ -1,12 +1,12 @@
 {
- "start": "2026-11-12T10:46:32.684Z",
+ "start": "2026-11-12T11:21:05.518Z",
  "round": 0,
  "idle": 0,
  "errors": 0,
  "status": "pass",
  "history": [
   {
-   "at": "2026-11-12T10:48:45.852Z",
+   "at": "2026-11-12T11:23:12.074Z",
    "mode": "manual",
    "status": "pass",
    "fails": 0,
@@ -24,11 +24,11 @@
   "category": "management consultancy",
   "primary": "Request a meeting",
   "rounds": 3,
-  "start": "2026-11-12T10:46:32.684Z",
+  "start": "2026-11-12T11:21:05.518Z",
   "by": "gate.mjs --start"
  },
  "manual": true,
- "fp": "b6278b8dc3158b08",
+ "fp": "2b0637553c596460",
  "page": "dist/index.html",
  "found": {
   "fails": [
@@ -135,16 +135,6 @@
     "from": "consistency"
    },
    {
-    "check": "photo-set",
-    "where": "div.hero-text.hero__in > div.hero__media.hero__fill > picture.pic > img \"photo-p30689114-1280.avif\"",
-    "msg": "5 photographs in more than one look: saturation from 0.24 to 0.58; the odd one out is photo-p30689114-1280.avif",
-    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
-    "widths": [
-     1440
-    ],
-    "from": "consistency"
-   },
-   {
     "check": "photo-credit",
     "where": "(the page text)",
     "msg": "2 library sources (pexels, wikimedia): the page credits pexels, the page credits wikimedia; confirm each shows the client's own product, place or people",
@@ -216,8 +206,8 @@
    },
    {
     "check": "photo-set",
-    "where": "div.hero-text.hero__in > div.hero__media.hero__fill > picture.pic > img \"photo-p30689114-tall-480.avif\"",
-    "msg": "7 photographs in more than one look: warm and cool photographs mixed (b* -6 to +13); the odd one out is photo-p30689114-tall-480.avif",
+    "where": "div.hero-text.hero__in > div.hero__media.hero__fill > picture.pic > img \"photo-p3894377-tall-480.avif\"",
+    "msg": "7 photographs in more than one look: warm and cool photographs mixed (b* -6 to +8); the odd one out is photo-p3894377-tall-480.avif",
     "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
     "widths": [
      390
@@ -237,8 +227,8 @@
   ],
   "crashed": [],
   "seconds": {
-   "consistency": 120,
-   "layout": 12
+   "consistency": 112,
+   "layout": 14
   }
  },
  "open": [],
@@ -295,6 +285,6 @@
    "reason": "the right six columns hold the form on its surface panel, which ends on the right line; the check counts only the photograph in the left column"
   }
  ],
- "warnCount": 15,
- "at": "2026-11-12T10:48:45.854Z"
+ "warnCount": 14,
+ "at": "2026-11-12T11:23:12.076Z"
 }

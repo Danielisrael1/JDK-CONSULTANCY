@@ -1,8 +1,8 @@
 // The seven photographs, every one a licensed stand-in until the firm supplies its own (credits in
 // the footer line and /credits.html; the README lists each with the photograph to take in its
-// place). Five are from Pexels: two meetings in Lagos offices (Ninthgrid), a shopkeeper (Kalz
-// Michael, a Kampala photographer), a presenter at a flip chart (RDNE Stock project) and a community
-// meeting (Speak Media Uganda). Two are from Wikimedia Commons, both taken in Kampala. Alt text is written new and says what is in the frame, never who the people are: the
+// place). Five are from Pexels: a woman on the phone at her desk (PICHA Stock), a meeting in a Lagos
+// office (Ninthgrid), a shopkeeper (Kalz Michael, a Kampala photographer), a presenter at a flip
+// chart (RDNE Stock project) and a community meeting (Speak Media Uganda). Two are from Wikimedia Commons, both taken in Kampala. Alt text is written new and says what is in the frame, never who the people are: the
 // page does not present them as the firm's staff or clients. scripts/images.mjs cuts every file
 // from the masters in photos-src/.
 export type Photo = {
@@ -58,15 +58,15 @@ const HALF = '(max-width: 639px) calc(100vw - 48px), (max-width: 1023px) 140vw, 
 export const photos = {
   // the film frame: 1280 x 804 at 1440, the whole wrap less the words' box; under 1024 it stands
   // taller than wide, so the tall cut of the same photograph takes over there
-  hero: photo('p30689114', 1280 / 804, {
-    alt: 'Three colleagues standing together in an office in Lagos, looking at a laptop one of them holds',
-    subject: 'team-at-laptop',
+  hero: photo('p3894377', 1280 / 804, {
+    alt: 'A smiling woman in a blue patterned jacket talking on the phone at her desk, a bookshelf behind her',
+    subject: 'woman-at-desk',
     sizes: '(max-width: 1023px) calc(100vw - 32px), (max-width: 1439px) calc(100vw - 160px), 1280px',
-    pos: '50% 40%',
+    pos: '50% 20%',
     art: {
       media: '(max-width: 1023px)',
-      srcset: set('p30689114-tall', 'jpg', [480, 720, 960]),
-      avif: set('p30689114-tall', 'avif', [480, 720, 960]),
+      srcset: set('p3894377-tall', 'jpg', [480, 720, 960]),
+      avif: set('p3894377-tall', 'avif', [480, 720, 960]),
     },
   }, [800, 1280, 1920]),
   strategy: plain('p7414040', {
