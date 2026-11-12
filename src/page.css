@@ -21,13 +21,19 @@ picture.pic { display: contents; }
 /* services, live (from 1024 on a screen 640 or taller): the shared frame is square rather than
    4:3, so the photograph reaches nearly as deep as the screen the stage holds, and the steps are set
    a size up and centred beside it. The moment's stylesheet loads after this file, so these rules
-   carry the section's id to win. */
-#services.is-live > .mo-pc__grid { align-items: center; }
+   carry the section's id to win. Up to 1279 the kit makes every section a flex column whose inner
+   block grows to the section's height; the stage must stay one screen tall to stick, so it does
+   not grow. */
+#services.is-live > .mo-pc__grid { align-items: center; flex: none; }
 #services.is-live .mo-pc__visuals { aspect-ratio: 1 / 1; }
-#services .mo-pc__text { gap: var(--s-7); }
-#services .mo-pc__steps { gap: var(--s-6); }
-#services .mo-pc__step h3 { font-size: 24px; line-height: 1.25; }
-#services .mo-pc__step p { font-size: var(--t-lead); line-height: 1.5; }
+#services.is-live .mo-pc__text { gap: var(--s-7); }
+#services.is-live .mo-pc__steps { gap: var(--s-6); }
+#services.is-live .mo-pc__step h3 { font-size: 24px; line-height: 1.25; }
+#services.is-live .mo-pc__step p { font-size: var(--t-lead); line-height: 1.5; }
+
+/* the footer's initial mark: the same tile as the kit's (0.6em of the name), its letter at the nav
+   mark's proportion (15px on a 26px tile), so the letter's box stays inside the tile at every size */
+.footer__mark .mark--initial { font-size: 0.35em; width: 1.7em; height: 1.7em; margin-right: 0.3em; }
 
 /* sectors: the card row takes the screen under the heading, and each panel grows with it; the
    section is the page's one surface band (surface-pairs) */
@@ -56,18 +62,25 @@ picture.pic { display: contents; }
    screen (footer headings are not ranked against the page's h2s) */
 .closing__cta.close--type h2 { font-size: clamp(40px, 5.6vw + 14px, 96px); line-height: 1.02; letter-spacing: var(--display-tracking-xl); max-width: 16ch; }
 
-/* the hero from 1024 to 1279: the frame is only 864 to 1120 wide there, so the words' box is set
-   narrower, with the headline a size down, and the photograph sits to the right, keeping the
-   people in view beside the box */
+/* from 1024 to 1279: the frame is only 864 to 1120 wide, so the hero's box is set narrower, with
+   the headline a size down, and the photograph sits to the right, keeping the people in view beside
+   the box; on a 768-tall screen the contact form's panel takes less padding so it fits its screen */
 @media (min-width: 1024px) and (max-width: 1279px) {
   .hero--film .hero__over > :first-child { max-width: 480px; padding: var(--s-6); }
   .hero--film .hero__over h1 { font-size: 48px; }
   .hero--film .hero__media > picture > img { object-position: 100% 40%; }
+  .meet__panel { padding: var(--s-6); }
+  .meet__panel textarea { min-height: 96px; }
 }
 
-/* tablet: the sector cards keep their pair, the contact form stays beside its words, and the close's
-   heading takes two lines and its button the full width, so the tall screen is filled */
+/* tablet: the hero's box keeps to the frame's lower left, so the photograph shows beside it; the
+   three services stand as rows whose photographs share one screen; the sector cards keep their
+   pair; the contact form stays beside its words; the close's heading takes two lines and its button
+   the full width, so the tall screen is filled; the three link columns span the row */
 @media (min-width: 640px) and (max-width: 1023px) {
+  .hero--film .hero__over > :first-child { max-width: min(560px, 74%); justify-self: start; }
+  #services:not(.is-live) .mo-pc__visual > img { max-height: calc((100svh - 440px) / 3); }
+  .closing__links .footer__col { grid-column: auto / span 4; }
   .closing__cta.close--type h2 { font-size: clamp(64px, 11vw, 112px); max-width: 12ch; }
   #meeting > .wrap > .meet__words { grid-column: 1 / span 5; }
   #meeting > .wrap > .meet__panel { grid-column: 6 / -1; padding: var(--s-6); }

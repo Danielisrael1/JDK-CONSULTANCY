@@ -1,58 +1,16 @@
 {
- "start": "2026-11-11T11:04:51.867Z",
- "round": 2,
+ "start": "2026-11-12T10:46:32.684Z",
+ "round": 0,
  "idle": 0,
  "errors": 0,
  "status": "pass",
  "history": [
   {
-   "at": "2026-11-11T12:06:12.267Z",
-   "mode": "hook",
-   "host": "claude",
-   "status": "fail",
-   "fails": 3,
-   "round": 0,
-   "reused": false,
-   "stopHookActive": false,
-   "decision": "block",
-   "reason": "3 FAILs remain (not a round: the gate has not been run by hand in this build yet):"
-  },
-  {
-   "at": "2026-11-11T12:12:51.123Z",
-   "mode": "hook",
-   "host": "claude",
-   "status": "fail",
-   "fails": 1,
-   "round": 0,
-   "reused": false,
-   "stopHookActive": true,
-   "decision": "block",
-   "reason": "1 FAIL remain (not a round: the gate has not been run by hand in this build yet):"
-  },
-  {
-   "at": "2026-11-12T09:11:10.262Z",
-   "mode": "manual",
-   "status": "fail",
-   "fails": 4,
-   "round": 1,
-   "reused": false,
-   "stopHookActive": false
-  },
-  {
-   "at": "2026-11-12T09:16:46.510Z",
-   "mode": "manual",
-   "status": "fail",
-   "fails": 1,
-   "round": 2,
-   "reused": false,
-   "stopHookActive": false
-  },
-  {
-   "at": "2026-11-12T09:27:21.069Z",
+   "at": "2026-11-12T10:48:45.852Z",
    "mode": "manual",
    "status": "pass",
    "fails": 0,
-   "round": 2,
+   "round": 0,
    "reused": false,
    "stopHookActive": false
   }
@@ -66,14 +24,11 @@
   "category": "management consultancy",
   "primary": "Request a meeting",
   "rounds": 3,
-  "start": "2026-11-11T11:04:51.867Z",
+  "start": "2026-11-12T10:46:32.684Z",
   "by": "gate.mjs --start"
  },
- "roundKey": "5cce8e82edffa51d:63d29d94",
- "roundFree": false,
- "idleFree": false,
- "blockKey": null,
- "fp": "b763761c11541e0b",
+ "manual": true,
+ "fp": "b6278b8dc3158b08",
  "page": "dist/index.html",
  "found": {
   "fails": [
@@ -262,7 +217,7 @@
    {
     "check": "photo-set",
     "where": "div.hero-text.hero__in > div.hero__media.hero__fill > picture.pic > img \"photo-p30689114-tall-480.avif\"",
-    "msg": "7 photographs in more than one look: warm and cool photographs mixed (b* -6 to +15); the odd one out is photo-p30689114-tall-480.avif",
+    "msg": "7 photographs in more than one look: warm and cool photographs mixed (b* -6 to +13); the odd one out is photo-p30689114-tall-480.avif",
     "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
     "widths": [
      390
@@ -282,8 +237,8 @@
   ],
   "crashed": [],
   "seconds": {
-   "consistency": 119,
-   "layout": 15
+   "consistency": 120,
+   "layout": 12
   }
  },
  "open": [],
@@ -341,7 +296,5 @@
   }
  ],
  "warnCount": 15,
- "at": "2026-11-12T09:27:21.071Z",
- "session": "61835e29-722c-478e-b823-dd2c3dc4c762",
- "manual": true
+ "at": "2026-11-12T10:48:45.854Z"
 }
